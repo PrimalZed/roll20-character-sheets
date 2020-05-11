@@ -192,58 +192,58 @@ input.sheet-sheetoptions + span.sheet-attr {
 }
 
 input.sheet-game-line[value="mortal"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/chronicles-bg.jpg');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/chronicles-bg.jpg');
     background-size: 100% 100%;
     opacity: 0.2
 }
 
 input.sheet-game-line[value="vampire"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/vampire-bg.jpg');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/vampire-bg.jpg');
     background-size: 100% 105%;
 }
 
 input.sheet-game-line[value="werewolf"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/werewolf-bg.png');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/werewolf-bg.png');
     background-size: 100% 100%;
 }
 
 input.sheet-game-line[value="mage"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/mage-bg.png');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/mage-bg.png');
     background-size: 100% 100%;
 }
 
 input.sheet-game-line[value="promethean"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/promethean-bg.png');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/promethean-bg.png');
     background-size: 100% 100%;
 }
 
 input.sheet-game-line[value="changeling"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/changeling-bg.png');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/changeling-bg.png');
     background-size: 100% 102%;
 }
 
 input.sheet-game-line[value="geist"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/deemlbag.png');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/deemlbag.png');
     background-size: 100% 100%;
 }
 
 input.sheet-game-line[value="mummy"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/mummy-bg.jpg');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/mummy-bg.jpg');
     background-size: 100% 100%;
 }
 
 input.sheet-game-line[value="demon"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/demon-bg.png');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/demon-bg.png');
     background-size: 100% 100%;
 }
 
 input.sheet-game-line[value="beast"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/beast-bg.png');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/beast-bg.png');
     background-size: 100% 101%;
 }
 
 input.sheet-game-line[value="hunter"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/hunter-bg.png');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/hunter-bg.png');
     background-size: 100% 100%;
 }
 
@@ -479,7 +479,7 @@ input.sheet-game-line[value="hunter"] ~ * input.sheet-weapon:checked + span + .s
 }
 
 .charsheet .sheet-diceroller .sheet-rollcontainer {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/die.png') no-repeat center;
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/die.png') no-repeat center;
     background-size: contain;
     border-bottom: solid 1px #000000;
 }
@@ -912,7 +912,7 @@ input.sheet-zero:hover + span::before {
 {
     width: 189px;
     height: 100%;
-    background: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/roll.jpg) no-repeat top left;
+    background: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/roll.jpg) no-repeat top left;
     background-size: 189px 100%;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
@@ -1367,7 +1367,7 @@ input[type=number] {
 }
 
 .sheet-page2 .sheet-rollcontainer {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/die.png') no-repeat center;
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness/images/die.png') no-repeat center;
     background-size: contain;
     height: 40px;
     width: 40px;
