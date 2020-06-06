@@ -46,6 +46,8 @@
         <button type="action" class="toggle active-geist1" name="act_sheet_type_geist1" title="Geist" data-i18n="geist-the-sin-eaters">Geist the Sin Eaters</button>
         
         <button type="action" class="toggle active-mummy1" name="act_sheet_type_mummy1" title="Mummy" data-i18n="mummy-the-curse">Mummy the Curse</button>
+
+        
     </div>
 
     <div class="spacer"></div>
@@ -74,6 +76,8 @@
         <button type="action" class="toggle active-demon" name="act_sheet_type_demon" title="Demon" data-i18n="demon-the-descent">Demon the Descent</button>
 
         <button type="action" class="toggle active-beast" name="act_sheet_type_beast" title="Beast" data-i18n="beast-the-primordial">Beast the Primordial</button>
+
+        <button type="action" class="toggle active-demonfallen" name="act_sheet_type_demonfallen" title="demonfallen" data-i18n="demon-the-fallen">Demon the Fallen</button>
 
         <!-- <button type="action" class="toggle active-deviant" name="act_sheet_type_deviant" title="Deviant" data-i18n="deviant-the-renegades">Deviant the Renegades</button> -->
     </div>
@@ -212,6 +216,7 @@
     <img class="geist" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/geist.png">
     <img class="hunter" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/hunter.png">
     <img class="demon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/DtD_logo.png">
+    <img class="demonfallen" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/DtD_logo.png">
     <!-- <img class="deviant" src=""> -->
 </div>
 
@@ -233,6 +238,7 @@
             <span class="promethean2" data-i18n="elpis" >Elpis:</span>
             <span class="changeling2" data-i18n="needle" >Needle:</span>
             <span class="geist2" data-i18n="root" >Root:</span>
+            <span class="demonfallen" data-i18n="nature" >Nature:</span>
         </div>
         <input type="text" name="attr_Virtue">
         <div class="spacer"></div>
@@ -250,17 +256,18 @@
             <span class="demon" data-i18n="incarnation" >Incarnation:</span>
             <span class="beast" data-i18n="family" >Family:</span>
             <span class="hunter" data-i18n="profession" >Profession:</span>
+            <span class="demonfallen" data-i18n="demeanor" >Demeanor:</span>
         </div>
         <input type="text" name="attr_Chronicle">
         <!-- Row 2 -->
         <div class="input-label">
-            <span class="mortal1 mortal2 vampire werewolf mage promethean changeling geist1 mummy hunter demon" data-i18n="player">Player:</span>
+            <span class="mortal1 mortal2 vampire werewolf mage promethean changeling geist1 mummy hunter demon demonfallen" data-i18n="player">Player:</span>
             <span class="geist2-organization" data-i18n="archtype">Archetype:</span>
         </div>
         <input type="text" name="attr_Age">
         <div class="spacer"></div>
         <div class="input-label">
-            <span class="mortal1 mortal2 vampire1 werewolf1 mage promethean1 changeling1 geist1 mummy1 hunter demon" data-i18n="vice" >Vice:</span>
+            <span class="mortal1 mortal2 vampire1 werewolf1 mage promethean1 changeling1 geist1 mummy1 hunter demon demonfallen" data-i18n="vice" >Vice:</span>
             <span class="mortal2-organization geist2-organization" data-i18n="creed" >Creed:</span>
             <span class="vampire2" data-i18n="dirge" >Dirge:</span>
             <span class="werewolf2" data-i18n="bone" >Bone:</span>
@@ -268,6 +275,7 @@
             <span class="promethean2" data-i18n="torment" >Torment:</span>
             <span class="changeling2" data-i18n="thread" >Thread:</span>
             <span class="geist2" data-i18n="bloom" >Bloom:</span>
+            
         </div>
         <input type="text" name="attr_Vice">
         <div class="spacer"></div>
@@ -285,6 +293,7 @@
             <span class="demon" data-i18n="agenda" >Agenda:</span>
             <span class="beast" data-i18n="hunger" >Hunger:</span>
             <span class="hunter" data-i18n="compact" >Compact/Conspiracy:</span>
+            <span class="demonfallen" data-i18n="Faction" >Faction:</span>
         </div>
         <input type="text" name="attr_Faction">
         <!-- Row 3 -->
@@ -310,6 +319,7 @@
             <span class="geist" data-i18n="krewe-c" >Krewe:</span>
             <span class="mummy" data-i18n="judge" >Judge:</span>
             <span class="demon" data-i18n="catalyst" >Catalyst:</span>
+            <span class="demonfallen" data-i18n="catalyst" >Visage:</span>
             <span class="beast" data-i18n="horror" >Horror:</span>
         </div>
         <input type="text" name="attr_GroupName">
@@ -935,6 +945,7 @@
                                 <span class="geist2" data-i18n="haunts" >Haunts</span>
                                 <span class="mummy" data-i18n="pillars" >Pillars</span>
                                 <span class="demon" data-i18n="embeds-explo" >Embeds/Exploits</span>
+                                <span class="demonfallen" data-i18n="lore" >Lore</span>
                                 <span class="beast" data-i18n="nightmares-atavisms" >Nightmares/Atavisms</span>
                                 <span class="hunter" data-i18n="endowments" >Endowments</span>
                             </div>
@@ -1935,6 +1946,7 @@
                                 <span class="geist1" data-i18n="synergy" >Synergy</span>
                                 <span class="mummy" data-i18n="memory" >Memory</span>
                                 <span class="demon" data-i18n="cover" >Cover</span>
+                                <span class="demonfallen" data-i18n="demon-torment" >Torment</span>
                                 <span class="beast" data-i18n="satiety" >Satiety</span>
                             </td>
                         </tr>
@@ -1976,7 +1988,7 @@
                             </table>
                         </td>
                     </tr>
-                    <tr class="mortal2-organization vampire werewolf mage promethean changeling geist1 geist2-organization mummy demon beast">
+                    <tr class="mortal2-organization vampire werewolf mage promethean changeling geist1 geist2-organization mummy demon beast demonfallen">
                         <td>
                             <table class="potency">
                                 <tr>
@@ -1993,6 +2005,7 @@
                                         <span class="attr geist2-organization" style="font-size: 1em;" data-i18n="esotery">Esotery</span>
                                         <span class="attr mummy" style="font-size: 1em;" data-i18n="sekhem" >Sekhem</span>
                                         <span class="attr demon" style="font-size: 1em;" data-i18n="primum" >Primum</span>
+                                        <span class="attr demonfallen" style="font-size: 1em;" data-i18n="faith" >Faith</span>
                                         <span class="attr beast" style="font-size: 1em;" data-i18n="lair" >Lair</span>
                                     </td>
                                 </tr>
@@ -2019,7 +2032,7 @@
                     <tr>
                         <td class="el_spacer"></td>
                     </tr>
-                    <tbody class="vampire werewolf mage promethean changeling geist1 geist2 mummy demon beast">
+                    <tbody class="vampire werewolf mage promethean changeling geist1 mummy demon beast">
                         <tr>
                             <td>
                                 <table class="potency">
@@ -2030,8 +2043,9 @@
                                             <span class="mage" data-i18n="mana" >Mana</span>
                                             <span class="promethean" data-i18n="pyros" >Pyros</span>
                                             <span class="changeling" data-i18n="glamour" >Glamour</span>
-                                            <span class="geist" data-i18n="plasm" >Plasm</span>
+                                            <span class="geist1" data-i18n="plasm" >Plasm</span>
                                             <span class="demon" data-i18n="aether" >Aether</span>
+                                            <span class="demonfallen" data-i18n="faith-temp" >Temporary Faith</span>
                                         </td>
                                     </tr>
                                     <tr class="vitae">
@@ -2044,7 +2058,7 @@
                                             <span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box11"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box12"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box13"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box14"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box15"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box16"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box17"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box18"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box19"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box20"><span></span></span>
                                         </td>
                                     </tr>
-                                    <tr class="vitae geist">
+                                    <tr class="vitae geist1">
                                         <td class="vitae">
                                             <span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box21"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box22"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box23"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box24"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box25"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box26"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box27"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box28"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box29"><span></span></span><span class="healthboxcontainer"><input type="checkbox" class="checkbox" name="attr_vitae_box30"><span></span></span>
                                         </td>
@@ -2382,6 +2396,23 @@
             </div>
             <br>
         </div>
+           <div class="demonfallen">
+            <div class="sheet-customroll">
+                <span class="subheader" data-i18n="glitches" >Glitches</span><br>
+                <textarea rows="2" cols="40" name="attr_glitches"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader" data-i18n="pacts" >Pacts</span><br>
+                <textarea rows="2" cols="40" name="attr_pacts"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader" data-i18n="interlocks" >Interlocks</span><br>
+                <textarea rows="2" cols="40" name="attr_interlocks"></textarea>
+            </div>
+            <br>
+        </div>
         <div class="beast">
             <div class="sheet-customroll">
                 <span class="subheader" data-i18n="satiety-preferences" >Satiety Preferences</span><br>
@@ -2445,6 +2476,7 @@
             <span class="subheader geist1" data-i18n="haunt" >Haunt</span>
             <span class="subheader geist2" data-i18n="cenote" >Cenote</span>
             <span class="subheader demon" data-i18n="bolthole" >Bolthole</span>
+            <span class="subheader demonfallen" data-i18n="bolthole" >Bolthole</span>
             <span class="subheader beast" data-i18n="lair" >Lair</span>
             <br>
             <textarea rows="2" cols="40" name="attr_residence"></textarea>
@@ -2580,6 +2612,23 @@
             <div class="sheet-customroll">
                 <span class="subheader" data-i18n="demonic-form-abilities" >Demonic Form Abilities</span><br>
                 <textarea rows="2" cols="40" name="attr_demonicform"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader" data-i18n="gadgets" >Gadgets</span><br>
+                <textarea rows="2" cols="40" name="attr_gadgets"></textarea>
+            </div>
+            <br>
+            <div class="sheet-customroll">
+                <span class="subheader" data-i18n="covers" >Covers</span><br>
+                <textarea rows="2" cols="40" name="attr_covers"></textarea>
+            </div>
+            <br>
+        </div>
+          <div class="demonfallen">
+            <div class="sheet-customroll">
+                <span class="subheader" data-i18n="apocalyptic-form-abilities" >Apocalyptic Form Abilities</span><br>
+                <textarea rows="2" cols="40" name="attr_apocalypticform"></textarea>
             </div>
             <br>
             <div class="sheet-customroll">
@@ -3015,7 +3064,7 @@
     var normalStats = [ ...attributes, ...skills ];
     var powers = ["animalism","auspex","celerity","dominate","majesty","nightmare","obfuscate","protean","resilience","vigor","crúac","thebansorcery","death","fate","forces","life","matter","mind","prime","spirit","space","time"];
     var allStats = [ ...attributes, ...skills, ...powers, "potency" ];
-    var potencyNames = { mortal1:"", mortal2:"", "mortal2-organization":"Standing", vampire1:"Blood Potency", vampire2:"Blood Potency", werewolf1:"Primal Urge", werewolf2:"Primal Urge", mage1:"Gnosis", mage2:"Gnosis", promethean1:"Azoth", promethean2:"Azoth", changeling1:"Wyrd", changeling2:"Wyrd", demon:"Primum", beast:"Lair", hunter:"", geist1:"Psyche", geist2:"Synergy", "geist2-organization":"Esotery", mummy1:"Sekhem" };
+    var potencyNames = { mortal1:"", mortal2:"", "mortal2-organization":"Standing", vampire1:"Blood Potency", vampire2:"Blood Potency", werewolf1:"Primal Urge", werewolf2:"Primal Urge", mage1:"Gnosis", mage2:"Gnosis", promethean1:"Azoth", promethean2:"Azoth", changeling1:"Wyrd", changeling2:"Wyrd", demon:"Primum",demonfallen:"Faith", beast:"Lair", hunter:"", geist1:"Psyche", geist2:"Synergy", "geist2-organization":"Esotery", mummy1:"Sekhem" };
     
     [ ...allStats, "rolltype" ].forEach((attr) => {
         on(`change:${attr} change:${attr}_flag`, (eventInfo) => {
@@ -3149,7 +3198,7 @@
 
     const sheettypes = [
         "mortal1","vampire1","werewolf1","mage1","promethean1","changeling1","hunter","geist1","mummy1",
-        "mortal2","vampire2","werewolf2","mage2","promethean2","changeling2","hunter2","geist2","mummy2","demon","beast",
+        "mortal2","vampire2","werewolf2","mage2","promethean2","changeling2","hunter2","geist2","mummy2","demon","demonfallen","beast",
         "mortal2-organization","geist2-organization"
     ];
     sheettypes.forEach(sheettype => {
@@ -3275,7 +3324,9 @@
             case "mummy2":
                 return "mummy";
             case "demon":
-                return "demon";
+                return "demon
+            case "demonfallen":
+                return "demonfallen";
             case "beast":
                 return "beast";
         }
@@ -3303,6 +3354,7 @@
             case "hunter2":
             case "mummy2":
             case "demon":
+            case "demonfallen":
             case "beast":
             case "mortal2-organization":
             case "geist2-organization":
@@ -3331,6 +3383,7 @@
             case "geist2":
             case "mummy2":
             case "demon":
+            case "demonfallen":
             case "beast":
                 return "corporeal";
             case "mortal2-organization":
