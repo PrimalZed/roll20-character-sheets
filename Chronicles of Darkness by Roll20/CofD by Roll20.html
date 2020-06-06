@@ -3022,7 +3022,7 @@
     var normalStats = [ ...attributes, ...skills ];
     var powers = ["animalism","auspex","celerity","dominate","majesty","nightmare","obfuscate","protean","resilience","vigor","crúac","thebansorcery","death","fate","forces","life","matter","mind","prime","spirit","space","time"];
     var allStats = [ ...attributes, ...skills, ...powers, "potency" ];
-    var potencyNames = { mortal1:"", mortal2:"", "mortal2-organization":"Standing", vampire1:"Blood Potency", vampire2:"Blood Potency", werewolf1:"Primal Urge", werewolf2:"Primal Urge", mage1:"Gnosis", mage2:"Gnosis", promethean1:"Azoth", promethean2:"Azoth", changeling1:"Wyrd", changeling2:"Wyrd", demon:"Primum", beast:"Lair", hunter:"", geist1:"Psyche", geist2:"Synergy", "geist2-organization":"Esotery", mummy1:"Sekhem" };
+    var potencyNames = { mortal1:"", mortal2:"", "mortal2-organization":"Standing", vampire1:"Blood Potency", vampire2:"Blood Potency", werewolf1:"Primal Urge", werewolf2:"Primal Urge", mage1:"Gnosis", mage2:"Gnosis", promethean1:"Azoth", promethean2:"Azoth", changeling1:"Wyrd", changeling2:"Wyrd", demon:"Primum", beast:"Lair", hunter:"", geist1:"Psyche", geist2:"Synergy", "geist2-organization":"Esotery", mummy1:"Sekhem", demonfallen:"Faith" };
     
     [ ...allStats, "rolltype" ].forEach((attr) => {
         on(`change:${attr} change:${attr}_flag`, (eventInfo) => {
@@ -3156,7 +3156,7 @@
 
     const sheettypes = [
         "mortal1","vampire1","werewolf1","mage1","promethean1","changeling1","hunter","geist1","mummy1",
-        "mortal2","vampire2","werewolf2","mage2","promethean2","changeling2","hunter2","geist2","mummy2","demon","beast",
+        "mortal2","vampire2","werewolf2","mage2","promethean2","changeling2","hunter2","geist2","mummy2","demon", "demonfallen", "beast",
         "mortal2-organization","geist2-organization"
     ];
     sheettypes.forEach(sheettype => {
