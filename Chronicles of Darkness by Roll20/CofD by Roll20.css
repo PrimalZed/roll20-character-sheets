@@ -332,6 +332,7 @@ input.sheet-type[value="geist2-organization"] ~ * button.sheet-active-geist2-org
 input.sheet-type[value="mummy1"] ~ * button.sheet-active-mummy1,
 input.sheet-type[value="mummy2"] ~ * button.sheet-active-mummy2,
 input.sheet-type[value="demon"] ~ * button.sheet-active-demon,
+input.sheet-type[value="demonfallen"] ~ * button.sheet-active-demonfallen,
 input.sheet-type[value="beast"] ~ * button.sheet-active-beast {
     color: #2A2D80;
     text-shadow: 0px 0px 10px black;
