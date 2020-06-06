@@ -45,7 +45,8 @@
 .sheet-mummy2,
 .sheet-demon,
 .sheet-beast,
-.sheet-hunter {
+.sheet-hunter,
+.sheet-demonfall {
     display: none !important;
 }
 
@@ -76,6 +77,7 @@ input.sheet-game-line[value="mummy"] ~ * .sheet-mummy,
 input.sheet-type[value="mummy1"] ~ * .sheet-mummy1,
 input.sheet-type[value="mummy2"] ~ * .sheet-mummy2,
 input.sheet-game-line[value="demon"] ~ * .sheet-demon,
+input.sheet-game-line[value="demonfall"] ~ * .sheet-demonfall,
 input.sheet-game-line[value="beast"] ~ * .sheet-beast,
 input.sheet-game-line[value="hunter"] ~ * .sheet-hunter {
     display: inline-block !important;
@@ -108,6 +110,7 @@ input.sheet-game-line[value="mummy"] ~ * div.sheet-mummy,
 input.sheet-type[value="mummy1"] ~ * div.sheet-mummy1,
 input.sheet-type[value="mummy2"] ~ * div.sheet-mummy2,
 input.sheet-game-line[value="demon"] ~ * div.sheet-demon,
+input.sheet-game-line[value="demonfall"] ~ * div.sheet-demonfall,
 input.sheet-game-line[value="beast"] ~ * div.sheet-beast,
 input.sheet-game-line[value="hunter"] ~ * div.sheet-hunter {
     display: block !important;
@@ -140,6 +143,7 @@ input.sheet-game-line[value="mummy"] ~ * table.sheet-mummy,
 input.sheet-type[value="mummy1"] ~ * table.sheet-mummy1,
 input.sheet-type[value="mummy2"] ~ * table.sheet-mummy2,
 input.sheet-game-line[value="demon"] ~ * table.sheet-demon,
+input.sheet-game-line[value="demonfall"] ~ * table.sheet-demonfall,
 input.sheet-game-line[value="beast"] ~ * table.sheet-beast,
 input.sheet-game-line[value="hunter"] ~ * table.sheet-hunter {
     display: table !important;
@@ -242,6 +246,11 @@ input.sheet-game-line[value="demon"] ~ .sheet-background-image::after {
     background-size: 100% 100%;
 }
 
+input.sheet-game-line[value="demonfall"] ~ .sheet-background-image::after {
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/demon-bg.png');
+    background-size: 100% 100%;
+}
+
 input.sheet-game-line[value="beast"] ~ .sheet-background-image::after {
     background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/beast-bg.png');
     background-size: 100% 101%;
@@ -254,7 +263,7 @@ input.sheet-game-line[value="hunter"] ~ .sheet-background-image::after {
 
 input.sheet-settingssheet:checked ~ .sheet-background-image::after,
 input.sheet-page2-sheet:checked ~ .sheet-background-image::after,
-input.sheet-page3-sheet:checked ~ .sheet-background-image::after{
+input.sheet-page3-sheet:checked ~ .sheet-background-image::after {
     background-size: 100%;
 }
 
@@ -265,23 +274,24 @@ input.sheet-page3-sheet:checked ~ .sheet-background-image::after{
     min-height: 185px;
 }
 
-.sheet-header img.sheet-mortal,
-.sheet-header img.sheet-vampire,
-.sheet-header img.sheet-werewolf,
-.sheet-header img.sheet-mage,
-.sheet-header img.sheet-promethean,
-.sheet-header img.sheet-changeling {
-    height: 150px;
-}
+    .sheet-header img.sheet-mortal,
+    .sheet-header img.sheet-vampire,
+    .sheet-header img.sheet-werewolf,
+    .sheet-header img.sheet-mage,
+    .sheet-header img.sheet-promethean,
+    .sheet-header img.sheet-changeling {
+        height: 150px;
+    }
 
-.sheet-header img.sheet-hunter {
-    height: 120px;
-}
+    .sheet-header img.sheet-hunter {
+        height: 120px;
+    }
 
-.sheet-header img.sheet-geist,
-.sheet-header img.sheet-demon {
-    height: 200px;
-}
+    .sheet-header img.sheet-geist,
+    .sheet-header img.sheet-demonfall,
+    .sheet-header img.sheet-demon {
+        height: 200px;
+    }
 
 button.sheet-toggle {
     /* Resetting user-agent styling */
@@ -292,7 +302,6 @@ button.sheet-toggle {
     overflow: visible;
     text-transform: none;
     border-style: none;
-
     padding: 0 4px;
     background: white;
     border-radius: 4px;
@@ -427,6 +436,16 @@ input.sheet-game-line[value="demon"] ~ * input.sheet-weapon:checked + span + .sh
     color: #2A2D80;
 }
 
+input.sheet-type[value="demofall"] ~ * button.sheet-active-demonfall,
+input.sheet-game-line[value="demonfall"] + span.sheet-attr,
+input.sheet-game-line[value="demonfall"] ~ input.sheet-attr:checked + span.sheet-attr,
+input.sheet-game-line[value="demonfall"] ~ * input.sheet-attr:checked + span.sheet-attr,
+input.sheet-game-line[value="demonfall"] ~ * input.sheet-flag:not([value="0"]) + button.sheet-toggle,
+input.sheet-game-line[value="demonfall"] ~ * .sheet-potency input.sheet-attr:checked ~ span.sheet-attr,
+input.sheet-game-line[value="demonfall"] ~ * input.sheet-weapon:checked + span + .sheet-weaponstat.sheet-name {
+    color: #2A2D80;
+}
+
 input.sheet-type[value="beast"] ~ * button.sheet-active-beast,
 input.sheet-game-line[value="beast"] + span.sheet-attr,
 input.sheet-game-line[value="beast"] ~ input.sheet-attr:checked + span.sheet-attr,
@@ -475,13 +494,13 @@ input.sheet-game-line[value="hunter"] ~ * input.sheet-weapon:checked + span + .s
     border: solid 1px #000000;
 }
 
-.charsheet .sheet-diceroller table td {
-    border-right: solid 1px #000000;
-}
+    .charsheet .sheet-diceroller table td {
+        border-right: solid 1px #000000;
+    }
 
-.charsheet .sheet-diceroller table .sheet-bottom {
-    border-bottom: solid 1px #000000;
-}
+    .charsheet .sheet-diceroller table .sheet-bottom {
+        border-bottom: solid 1px #000000;
+    }
 
 .charsheet .sheet-diceroller .sheet-rollcontainer {
     background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/die.png') no-repeat center;
@@ -521,16 +540,16 @@ input.sheet-game-line[value="hunter"] ~ * input.sheet-weapon:checked + span + .s
     width: 100%;
 }
 
-.charsheet .sheet-3colrow table {
-    width: 100%;
-    border-collapse: separate;
-}
+    .charsheet .sheet-3colrow table {
+        width: 100%;
+        border-collapse: separate;
+    }
 
-.charsheet .sheet-3colrow .sheet-col {
-    width: calc(33% - 1px);
-    margin-right: 0px;
-    margin-left: 0px;
-}
+    .charsheet .sheet-3colrow .sheet-col {
+        width: calc(33% - 1px);
+        margin-right: 0px;
+        margin-left: 0px;
+    }
 
 .charsheet input[type=text] {
     display: inline-block;
@@ -541,7 +560,6 @@ input.sheet-game-line[value="hunter"] ~ * input.sheet-weapon:checked + span + .s
     border: 0px;
     border-radius: 0px;
     background: none;
-
     -moz-box-shadow: 0px 1px 0px #000;
     -webkit-box-shadow: 0px 1px 0px #000;
     box-shadow: 0px 1px 0px #000;
@@ -549,9 +567,9 @@ input.sheet-game-line[value="hunter"] ~ * input.sheet-weapon:checked + span + .s
 
 .charsheet textarea {
     display: inline-block;
-    width:100%;
-    margin:1px 0px;
-    resize:none;
+    width: 100%;
+    margin: 1px 0px;
+    resize: none;
     font-family: "Courier";
     color: #000000;
 }
@@ -559,6 +577,7 @@ input.sheet-game-line[value="hunter"] ~ * input.sheet-weapon:checked + span + .s
 .sheet-flex {
     display: flex;
 }
+
 .sheet-grow {
     flex: 1;
 }
@@ -568,9 +587,9 @@ input.sheet-game-line[value="hunter"] ~ * input.sheet-weapon:checked + span + .s
     justify-content: space-between;
 }
 
-.sheet-columns > :not(.sheet-horizontal-spacer) {
-    flex: 1;
-}
+    .sheet-columns > :not(.sheet-horizontal-spacer) {
+        flex: 1;
+    }
 
 .sheet-horizontal-spacer {
     padding: 0 15px;
@@ -600,12 +619,13 @@ input.sheet-game-line[value="hunter"] ~ * input.sheet-weapon:checked + span + .s
 .sheet-input-list > .sheet-input-group {
     padding: 2px;
 }
-.sheet-input-list > .sheet-input-group > input[type="text"],
-.sheet-input-list > .sheet-input-group > button.sheet-toggle {
-    height: 14px;
-    padding: 0;
-    text-align: left;
-}
+
+    .sheet-input-list > .sheet-input-group > input[type="text"],
+    .sheet-input-list > .sheet-input-group > button.sheet-toggle {
+        height: 14px;
+        padding: 0;
+        text-align: left;
+    }
 
 .sheet-info-grid {
     display: grid;
@@ -613,9 +633,9 @@ input.sheet-game-line[value="hunter"] ~ * input.sheet-weapon:checked + span + .s
     align-items: center;
 }
 
-.sheet-info-grid > input[type="text"] {
-    width: auto;
-}
+    .sheet-info-grid > input[type="text"] {
+        width: auto;
+    }
 
 .sheet-simple-attribute {
     display: flex;
@@ -633,7 +653,7 @@ input.sheet-game-line[value="hunter"] ~ * input.sheet-weapon:checked + span + .s
     padding: 2px;
     vertical-align: middle;
     color: #000000;
-    margin:0px 0px;
+    margin: 0px 0px;
     line-height: 1em;
 }
 
@@ -695,7 +715,7 @@ table.sheet-attributes td:last-child {
 }
 
 .charsheet table.sheet-attributes tr:last-child td:not(.sheet-spacer):not(.sheet-attributes-category) {
-   border-bottom: solid 1px black;
+    border-bottom: solid 1px black;
 }
 
 .charsheet table.sheet-attributes td.sheet-attributes-category {
@@ -728,8 +748,7 @@ span.sheet-attr {
 /* Hide actual dot/checkbox */
 input[type="radio"].sheet-dot,
 input.sheet-weapon,
-input[type="checkbox"].sheet-checkbox
-{
+input[type="checkbox"].sheet-checkbox {
     position: absolute;
     opacity: 0.0;
     width: 15px;
@@ -742,99 +761,79 @@ input.sheet-weapon {
     margin-top: 0px;
 }
 
-/* Styles common to fake dot and checkbox */
-input[type="radio"].sheet-dot + span::before,
-button.sheet-dot,
-input.sheet-weapon + span::before,
-input[type="checkbox"].sheet-checkbox + span::before,
-.sheet-permadot::before {
-    border: solid 1px #000000;
-    line-height: 11px;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
+    /* Styles common to fake dot and checkbox */
+    input[type="radio"].sheet-dot + span::before,
+    button.sheet-dot,
+    input.sheet-weapon + span::before,
+    input[type="checkbox"].sheet-checkbox + span::before,
+    .sheet-permadot::before {
+        border: solid 1px #000000;
+        line-height: 11px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        -moz-box-shadow: 0 0 0px #000;
+        -webkit-box-shadow: 0 0 0px #000;
+        box-shadow: 0 0 0px #000;
+        background: #000000;
+        background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+        background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+        background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+        background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+        background: radial-gradient(#f6f6f6, #dfdfdf);
+    }
 
-    -moz-box-shadow: 0 0 0px #000;
-    -webkit-box-shadow: 0 0 0px #000;
-    box-shadow: 0 0 0px #000;
+    /* Styles unique to fake dot (checked or left of checked) */
+    input[type="radio"].sheet-dot + span::before,
+    button.sheet-dot,
+    input.sheet-weapon:checked + span::before,
+    .sheet-permadot::before {
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
 
-    background: #000000;
-    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
-    background: radial-gradient(#f6f6f6, #dfdfdf);
-}
+    input[type="radio"].sheet-dot + span::before,
+    input.sheet-weapon:checked + span::before,
+    .sheet-permadot::before {
+        content: "•";
+        font-size: 41.9px;
+        font-family: "Arial";
+        text-indent: -2px;
+        font-weight: normal;
+    }
 
-/* Styles unique to fake dot (checked or left of checked) */
-input[type="radio"].sheet-dot + span::before,
-button.sheet-dot,
-input.sheet-weapon:checked + span::before,
-.sheet-permadot::before {
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-
-input[type="radio"].sheet-dot + span::before,
-input.sheet-weapon:checked + span::before,
-.sheet-permadot::before {
-    content: "•";
-    font-size: 41.9px;
-    font-family: "Arial";
-    text-indent: -2px;
-    font-weight: normal;
-}
-
-input.sheet-weapon + span::before
-{
-    content: "";
-    width: 10px;
-    height: 10px;
-    font-size: 35px;
-    font-family: "Arial";
-    text-indent: -1px;
-
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
+    input.sheet-weapon + span::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        font-size: 35px;
+        font-family: "Arial";
+        text-indent: -1px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
 
 /* Styles unique to fake checkbox (unchecked) */
-input[type="checkbox"].sheet-checkbox + span::before
-{
-    position:relative;
+input[type="checkbox"].sheet-checkbox + span::before {
+    position: relative;
     content: "";
     opacity: 1.0;
     width: 10px;
     height: 10px;
     font-size: 12px;
-
     -moz-border-radius: 1px;
     -webkit-border-radius: 1px;
     border-radius: 1px;
 }
 
 /* Styles unique to fake checkbox (checked) */
-input[type="checkbox"].sheet-checkbox:checked + span::before
-{
-    background:
-        linear-gradient(to top left,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%),
-       linear-gradient(to top right,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%);
-
+input[type="checkbox"].sheet-checkbox:checked + span::before {
+    background: linear-gradient(to top left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%), linear-gradient(to top right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%);
     -moz-box-shadow: 0 0 2px transparent;
     -webkit-box-shadow: 0 0 2px transparent;
     box-shadow: 0 0 2px transparent;
@@ -847,8 +846,7 @@ input[type="hidden"][value="1"] ~ input[type="radio"].sheet-dot.sheet-gt-1 + spa
 input[type="hidden"][value="2"] ~ input[type="radio"].sheet-dot.sheet-gt-2 + span::before,
 input[type="hidden"][value="3"] ~ input[type="radio"].sheet-dot.sheet-gt-3 + span::before,
 input[type="hidden"][value="4"] ~ input[type="radio"].sheet-dot.sheet-gt-4 + span::before,
-input[type="hidden"][value="5"] ~ input[type="radio"].sheet-dot.sheet-gt-5 + span::before
-{
+input[type="hidden"][value="5"] ~ input[type="radio"].sheet-dot.sheet-gt-5 + span::before {
     content: "";
 }
 
@@ -861,47 +859,44 @@ button.sheet-dot {
     background: radial-gradient(#f6f6f6, #dfdfdf);
 }
 
-button.sheet-dot.sheet-active,
-input[type="hidden"][value="1"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-1),
-input[type="hidden"][value="2"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-2),
-input[type="hidden"][value="3"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-3),
-input[type="hidden"][value="4"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-4),
-input[type="hidden"][value="5"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-5),
-input[type="hidden"][value="6"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-6),
-input[type="hidden"][value="7"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-7),
-input[type="hidden"][value="8"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-8),
-input[type="hidden"][value="9"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-9),
-input[type="hidden"][value="10"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-10) {
-    background: #404040;
-    background: -moz-radial-gradient(#404040, #404040);
-    background: -webkit-radial-gradient(#404040, #404040);
-    background: -ms-radial-gradient(#404040, #404040);
-    background: -o-radial-gradient(#404040, #404040);
-    background: radial-gradient(#404040, #404040);
-}
+    button.sheet-dot.sheet-active,
+    input[type="hidden"][value="1"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-1),
+    input[type="hidden"][value="2"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-2),
+    input[type="hidden"][value="3"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-3),
+    input[type="hidden"][value="4"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-4),
+    input[type="hidden"][value="5"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-5),
+    input[type="hidden"][value="6"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-6),
+    input[type="hidden"][value="7"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-7),
+    input[type="hidden"][value="8"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-8),
+    input[type="hidden"][value="9"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-9),
+    input[type="hidden"][value="10"] ~ button.sheet-dot:not(.sheet-zero):not(.sheet-gt-10) {
+        background: #404040;
+        background: -moz-radial-gradient(#404040, #404040);
+        background: -webkit-radial-gradient(#404040, #404040);
+        background: -ms-radial-gradient(#404040, #404040);
+        background: -o-radial-gradient(#404040, #404040);
+        background: radial-gradient(#404040, #404040);
+    }
 
-input.sheet-used+span::before
-{
+input.sheet-used + span::before {
     content: "✖";
     width: 12px;
     height: 12px;
     font-size: 12px;
-
     -moz-border-radius: 0%;
     -webkit-border-radius: 0%;
     border-radius: 0%;
 }
 
 input.sheet-zero + span::before,
-button.sheet-zero
-{
+button.sheet-zero {
     opacity: 0;
 }
 
-input.sheet-zero:hover + span::before,
-button.sheet-zero:hover {
-    opacity: 0.25;
-}
+    input.sheet-zero:hover + span::before,
+    button.sheet-zero:hover {
+        opacity: 0.25;
+    }
 
 input.sheet-zero:hover + span::before {
     font-size: 12px;
@@ -913,8 +908,7 @@ input.sheet-zero:hover + span::before {
 .sheet-rolltemplate-wod-attack table,
 .sheet-rolltemplate-wod-simple table,
 .sheet-rolltemplate-wod-3part table,
-.sheet-rolltemplate-wod-initiative table
-{
+.sheet-rolltemplate-wod-initiative table {
     width: 189px;
     height: 100%;
     background: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/roll.jpg) no-repeat top left;
@@ -928,8 +922,7 @@ input.sheet-zero:hover + span::before {
 .sheet-rolltemplate-wod-attack th,
 .sheet-rolltemplate-wod-simple th,
 .sheet-rolltemplate-wod-3part th,
-.sheet-rolltemplate-wod-initiative th
-{
+.sheet-rolltemplate-wod-initiative th {
     color: rgb(112, 0, 0);
     padding: 20px 20px 2px 20px;
     line-height: 1.2em;
@@ -941,9 +934,8 @@ input.sheet-zero:hover + span::before {
 .sheet-rolltemplate-wod td,
 .sheet-rolltemplate-wod-attack td,
 .sheet-rolltemplate-wod-simple td,
-.sheet-rolltemplate-wod-3part td ,
-.sheet-rolltemplate-wod-initiative td
-{
+.sheet-rolltemplate-wod-3part td,
+.sheet-rolltemplate-wod-initiative td {
     padding: 2px 20px 2px 20px;
     font-size: 1.0em;
     vertical-align: top;
@@ -952,9 +944,8 @@ input.sheet-zero:hover + span::before {
 .sheet-rolltemplate-wod .sheet-result,
 .sheet-rolltemplate-wod-attack .sheet-result,
 .sheet-rolltemplate-wod-simple .sheet-result,
-.sheet-rolltemplate-wod-3part .sheet-result ,
-.sheet-rolltemplate-wod-initiative .sheet-result
-{
+.sheet-rolltemplate-wod-3part .sheet-result,
+.sheet-rolltemplate-wod-initiative .sheet-result {
     font-size: 1.2em;
     text-align: center;
     color: rgb(112, 0, 0);
@@ -962,19 +953,17 @@ input.sheet-zero:hover + span::before {
 }
 
 
-.sheet-rolltemplate-wod .inlinerollresult,
-.sheet-rolltemplate-wod-attack .sheet-result .inlinerollresult,
-.sheet-rolltemplate-wod-simple .inlinerollresult,
-.sheet-rolltemplate-wod-3part .inlinerollresult,
-.sheet-rolltemplate-wod-initiative .inlinerollresult
-{
-    background-color: transparent;
-    color: #000000;
-    border: none;
-}
+    .sheet-rolltemplate-wod .inlinerollresult,
+    .sheet-rolltemplate-wod-attack .sheet-result .inlinerollresult,
+    .sheet-rolltemplate-wod-simple .inlinerollresult,
+    .sheet-rolltemplate-wod-3part .inlinerollresult,
+    .sheet-rolltemplate-wod-initiative .inlinerollresult {
+        background-color: transparent;
+        color: #000000;
+        border: none;
+    }
 
-.sheet-rolltemplate-wod-attack .inlinerollresult
- {
+.sheet-rolltemplate-wod-attack .inlinerollresult {
     background-color: transparent;
     color: #000000;
     border: none;
@@ -986,8 +975,7 @@ input.sheet-zero:hover + span::before {
 .sheet-rolltemplate-wod-attack .sheet-result .inlinerollresult.fullcrit,
 .sheet-rolltemplate-wod-simple .inlinerollresult.fullcrit,
 .sheet-rolltemplate-wod-3part .inlinerollresult.fullcrit,
-.sheet-rolltemplate-wod-initiative .inlinerollresult.fullcrit
-{
+.sheet-rolltemplate-wod-initiative .inlinerollresult.fullcrit {
     color: #000000;
     border: none;
 }
@@ -996,8 +984,7 @@ input.sheet-zero:hover + span::before {
 .sheet-rolltemplate-wod-attack .sheet-result .inlinerollresult.fullfail,
 .sheet-rolltemplate-wod-simple .inlinerollresult.fullfail,
 .sheet-rolltemplate-wod-3part .inlinerollresult.fullfail,
-.sheet-rolltemplate-wod-initiative .inlinerollresult.fullfail
-{
+.sheet-rolltemplate-wod-initiative .inlinerollresult.fullfail {
     color: #000000;
     border: none;
 }
@@ -1006,8 +993,7 @@ input.sheet-zero:hover + span::before {
 .sheet-rolltemplate-wod-attack .inlinerollresult.importantroll,
 .sheet-rolltemplate-wod-simple .inlinerollresult.importantroll,
 .sheet-rolltemplate-wod-3part .inlinerollresult.importantroll,
-.sheet-rolltemplate-wod-initiative .inlinerollresult.importantroll
-{
+.sheet-rolltemplate-wod-initiative .inlinerollresult.importantroll {
     color: #000000;
     border: none;
 }
@@ -1015,155 +1001,104 @@ input.sheet-zero:hover + span::before {
 .sheet-rolltemplate-wod .sheet-specialrollflag,
 .sheet-rolltemplate-wod-attack .sheet-specialrollflag,
 .sheet-rolltemplate-wod-simple .sheet-specialrollflag,
-.sheet-rolltemplate-wod-3part .sheet-specialrollflag ,
-.sheet-rolltemplate-wod-initiative .sheet-specialrollflag
-{
+.sheet-rolltemplate-wod-3part .sheet-specialrollflag,
+.sheet-rolltemplate-wod-initiative .sheet-specialrollflag {
     color: #000000;
     height: 30px;
     text-align: right;
     vertical-align: top;
 }
 
-.sheet-variablecontainer
-{
+.sheet-variablecontainer {
     padding: 0px;
     text-align: center;
 }
 
-/* Remove dot from all radios _after_ selected one */
-.sheet-variablecontainer input[type="radio"].sheet-dot:checked ~ input[type="radio"] + span::before
-{
-    opacity: 0;
-    display: none;
-}
+    /* Remove dot from all radios _after_ selected one */
+    .sheet-variablecontainer input[type="radio"].sheet-dot:checked ~ input[type="radio"] + span::before {
+        opacity: 0;
+        display: none;
+    }
 
-.sheet-variablecontainer input[type="radio"] {
-    pointer-events: none;
-}
+    .sheet-variablecontainer input[type="radio"] {
+        pointer-events: none;
+    }
 
-.sheet-variablecontainer input[type="radio"].sheet-whitedot,
-.sheet-variablecontainer input[type="radio"].sheet-bashingdot,
-.sheet-variablecontainer input[type="radio"].sheet-lethaldot,
-.sheet-variablecontainer input[type="radio"].sheet-aggravateddot
-{
-    pointer-events: auto;
-}
+        .sheet-variablecontainer input[type="radio"].sheet-whitedot,
+        .sheet-variablecontainer input[type="radio"].sheet-bashingdot,
+        .sheet-variablecontainer input[type="radio"].sheet-lethaldot,
+        .sheet-variablecontainer input[type="radio"].sheet-aggravateddot {
+            pointer-events: auto;
+        }
 
-/* -----BOXES----- */
-.sheet-variablecontainer .sheet-healthboxcontainer {
-    position: absolute;
-}
+    /* -----BOXES----- */
+    .sheet-variablecontainer .sheet-healthboxcontainer {
+        position: absolute;
+    }
 
-.sheet-variablecontainer .sheet-healthboxcontainer input
-{
-    top: 10px;
-    right: -3px;
-    position: absolute;
-    opacity: 0;
-    width: 15px;
-    cursor: pointer;
-    margin-top: 5px;
-    z-index: 101;
-}
+        .sheet-variablecontainer .sheet-healthboxcontainer input {
+            top: 10px;
+            right: -3px;
+            position: absolute;
+            opacity: 0;
+            width: 15px;
+            cursor: pointer;
+            margin-top: 5px;
+            z-index: 101;
+        }
 
-.sheet-variablecontainer .sheet-healthboxcontainer input + span::before
-{
-    top: 15px;
-    right: 0px;
-    position: absolute;
-    content: "";
-    opacity: 1.0;
-    width: 10px;
-    height: 10px;
-    font-size: 12px;
+            .sheet-variablecontainer .sheet-healthboxcontainer input + span::before {
+                top: 15px;
+                right: 0px;
+                position: absolute;
+                content: "";
+                opacity: 1.0;
+                width: 10px;
+                height: 10px;
+                font-size: 12px;
+                -moz-border-radius: 1px;
+                -webkit-border-radius: 1px;
+                border-radius: 1px;
+                border: solid 1px #000000;
+                line-height: 11px;
+                text-align: center;
+                vertical-align: middle;
+                -moz-box-shadow: 0 0 0px #000;
+                -webkit-box-shadow: 0 0 0px #000;
+                box-shadow: 0 0 0px #000;
+                background: #000000;
+                background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+                background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+                background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+                background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+                background: radial-gradient(#f6f6f6, #dfdfdf);
+            }
 
-    -moz-border-radius: 1px;
-    -webkit-border-radius: 1px;
-    border-radius: 1px;
+            .sheet-variablecontainer .sheet-healthboxcontainer input:checked + span::before {
+                -moz-box-shadow: 0 0 2px transparent;
+                -webkit-box-shadow: 0 0 2px transparent;
+                box-shadow: 0 0 2px transparent;
+            }
 
-    border: solid 1px #000000;
-    line-height: 11px;
-    text-align: center;
-    vertical-align: middle;
+            .sheet-variablecontainer .sheet-healthboxcontainer input[type="radio"].sheet-whitedot:checked + span::before {
+                content: "" !important;
+            }
 
-    -moz-box-shadow: 0 0 0px #000;
-    -webkit-box-shadow: 0 0 0px #000;
-    box-shadow: 0 0 0px #000;
+            .sheet-variablecontainer .sheet-healthboxcontainer input[type="radio"].sheet-bashingdot:checked + span::before {
+                background: linear-gradient(to top left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%);
+            }
 
-    background: #000000;
-    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
-    background: radial-gradient(#f6f6f6, #dfdfdf);
-}
+            .sheet-variablecontainer .sheet-healthboxcontainer input[type="radio"].sheet-lethaldot:checked + span::before {
+                background: linear-gradient(to top left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%), linear-gradient(to top right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%);
+            }
 
-.sheet-variablecontainer .sheet-healthboxcontainer input:checked + span::before
-{
-    -moz-box-shadow: 0 0 2px transparent;
-    -webkit-box-shadow: 0 0 2px transparent;
-    box-shadow: 0 0 2px transparent;
-}
+            .sheet-variablecontainer .sheet-healthboxcontainer input[type="radio"].sheet-aggravateddot:checked + span::before {
+                background: linear-gradient(to top left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%), linear-gradient(to top right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%), linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%);
+            }
 
-.sheet-variablecontainer .sheet-healthboxcontainer input[type="radio"].sheet-whitedot:checked + span::before
-{
-    content: "" !important;
-}
-
-.sheet-variablecontainer .sheet-healthboxcontainer input[type="radio"].sheet-bashingdot:checked + span::before
-{
-    background:
-       linear-gradient(to top left,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%);
-}
-
-.sheet-variablecontainer .sheet-healthboxcontainer input[type="radio"].sheet-lethaldot:checked + span::before
-{
-    background:
-        linear-gradient(to top left,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%),
-       linear-gradient(to top right,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%);
-}
-
-.sheet-variablecontainer .sheet-healthboxcontainer input[type="radio"].sheet-aggravateddot:checked + span::before
-{
-    background:
-        linear-gradient(to top left,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%),
-       linear-gradient(to top right,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%),
-        linear-gradient(to right,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%);
-}
-
-.sheet-variablecontainer .sheet-healthboxcontainer input[type="radio"].sheet-whitedot {
-    z-index: 102;
-}
+            .sheet-variablecontainer .sheet-healthboxcontainer input[type="radio"].sheet-whitedot {
+                z-index: 102;
+            }
 
 input.sheet-whitedot:checked ~ input.sheet-bashingdot,
 input.sheet-bashingdot:checked ~ input.sheet-lethaldot,
@@ -1189,37 +1124,32 @@ input.sheet-aggravateddot:checked ~ span.sheet-aggravateddot {
 }
 
 /* Remove extra health boxes */
-.sheet-variablecontainer input[type="radio"].sheet-dot:checked ~ .sheet-healthboxcontainer
-{
+.sheet-variablecontainer input[type="radio"].sheet-dot:checked ~ .sheet-healthboxcontainer {
     display: none;
 }
 
-.sheet-variablecontainer input[type="radio"].sheet-dot:checked + span + .sheet-healthboxcontainer
-{
+.sheet-variablecontainer input[type="radio"].sheet-dot:checked + span + .sheet-healthboxcontainer {
     display: inline-block !important;
 }
 
-.sheet-variablecontainer input[type="radio"].sheet-dot + span + .sheet-healthboxcontainer + .sheet-woundpenalties
-{
+.sheet-variablecontainer input[type="radio"].sheet-dot + span + .sheet-healthboxcontainer + .sheet-woundpenalties {
     position: relative;
     display: none;
 }
 
-.sheet-variablecontainer input[type="radio"].sheet-dot:checked + span + .sheet-healthboxcontainer + .sheet-woundpenalties
-{
+.sheet-variablecontainer input[type="radio"].sheet-dot:checked + span + .sheet-healthboxcontainer + .sheet-woundpenalties {
     display: inline-block
 }
 
-.sheet-variablecontainer input[type="radio"].sheet-dot:checked + span + .sheet-healthboxcontainer + .sheet-woundpenalties > span
-{
-    position: absolute;
-    top: 17px;
-    left: -50px;
-    width: 50px;
-    height: 10px;
-    font-size: 10px;
-    text-align: right;
-}
+    .sheet-variablecontainer input[type="radio"].sheet-dot:checked + span + .sheet-healthboxcontainer + .sheet-woundpenalties > span {
+        position: absolute;
+        top: 17px;
+        left: -50px;
+        width: 50px;
+        height: 10px;
+        font-size: 10px;
+        text-align: right;
+    }
 
 .sheet-variablecontainer .sheet-healthboxcontainer input[type="checkbox"] + span {
     display: inline-block;
@@ -1259,61 +1189,25 @@ input.sheet-aggravateddot:checked ~ span.sheet-aggravateddot {
     font-size: 10px;
 }
 
-.sheet-healthbox > button {
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    border: solid 1px #000000;
-    background: #efefef;
-}
+    .sheet-healthbox > button {
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border: solid 1px #000000;
+        background: #efefef;
+    }
 
-.sheet-healthbox > input[value="1"] ~ button.sheet-damage {
-    background:
-       linear-gradient(to top left,
-           #efefef 0%,
-           #efefef calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           #efefef calc(50% + 0.8px),
-           #efefef 100%);
-}
+    .sheet-healthbox > input[value="1"] ~ button.sheet-damage {
+        background: linear-gradient(to top left, #efefef 0%, #efefef calc(50% - 0.8px), rgba(0,0,0,1) 50%, #efefef calc(50% + 0.8px), #efefef 100%);
+    }
 
-.sheet-healthbox > input[value="2"] ~ button.sheet-damage {
-    background:
-        linear-gradient(to top left,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%),
-       linear-gradient(to top right,
-           #efefef 0%,
-           #efefef calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           #efefef calc(50% + 0.8px),
-           #efefef 100%);
-}
+    .sheet-healthbox > input[value="2"] ~ button.sheet-damage {
+        background: linear-gradient(to top left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%), linear-gradient(to top right, #efefef 0%, #efefef calc(50% - 0.8px), rgba(0,0,0,1) 50%, #efefef calc(50% + 0.8px), #efefef 100%);
+    }
 
-.sheet-healthbox > input[value="3"] ~ button.sheet-damage {
-    background:
-        linear-gradient(to top left,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%),
-       linear-gradient(to top right,
-           rgba(0,0,0,0) 0%,
-           rgba(0,0,0,0) calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           rgba(0,0,0,0) calc(50% + 0.8px),
-           rgba(0,0,0,0) 100%),
-        linear-gradient(to right,
-           #efefef 0%,
-           #efefef calc(50% - 0.8px),
-           rgba(0,0,0,1) 50%,
-           #efefef calc(50% + 0.8px),
-           #efefef 100%);
-}
+    .sheet-healthbox > input[value="3"] ~ button.sheet-damage {
+        background: linear-gradient(to top left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%), linear-gradient(to top right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(50% - 0.8px), rgba(0,0,0,1) 50%, rgba(0,0,0,0) calc(50% + 0.8px), rgba(0,0,0,0) 100%), linear-gradient(to right, #efefef 0%, #efefef calc(50% - 0.8px), rgba(0,0,0,1) 50%, #efefef calc(50% + 0.8px), #efefef 100%);
+    }
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -1322,7 +1216,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-    -moz-appearance:textfield;
+    -moz-appearance: textfield;
 }
 
 .sheet-derived input[type=number] {
@@ -1351,8 +1245,8 @@ input[type=number] {
     -webkit-box-shadow: 0px 1px 0px #000;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -webkit-appearance:none;
-    -moz-appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     margin-bottom: 0px;
 }
 
@@ -1368,10 +1262,10 @@ input[type=number] {
     vertical-align: top;
 }
 
-.sheet-rowtext input[type=text] {
-    padding: 0.1px;
-    height: 14px;
-}
+    .sheet-rowtext input[type=text] {
+        padding: 0.1px;
+        height: 14px;
+    }
 
 .sheet-weapontable input[type=text] {
     padding: 0.1px;
@@ -1379,35 +1273,35 @@ input[type=number] {
     width: 135px;
 }
 
-.sheet-weapontable input[type=text].sheet-weaponstat {
-    width: 17px;
-    text-align: center;
-}
+    .sheet-weapontable input[type=text].sheet-weaponstat {
+        width: 17px;
+        text-align: center;
+    }
 
-.sheet-weapontable input[type=text].sheet-weaponstat.sheet-name {
-    width: 130px;
-    text-align: left;
-}
+        .sheet-weapontable input[type=text].sheet-weaponstat.sheet-name {
+            width: 130px;
+            text-align: left;
+        }
 
-.sheet-weapontable input[type=text].sheet-weaponstat.sheet-range {
-    width: 80px;
-    text-align: center;
-}
+        .sheet-weapontable input[type=text].sheet-weaponstat.sheet-range {
+            width: 80px;
+            text-align: center;
+        }
 
-.sheet-weapontable input[type=text].sheet-weaponstat.sheet-mag {
-    width: 30px;
-    text-align: center;
-}
+        .sheet-weapontable input[type=text].sheet-weaponstat.sheet-mag {
+            width: 30px;
+            text-align: center;
+        }
 
-.sheet-weapontable input[type=text].sheet-weaponstat.sheet-desc {
-    width: 135px;
-    text-align: left;
-}
+        .sheet-weapontable input[type=text].sheet-weaponstat.sheet-desc {
+            width: 135px;
+            text-align: left;
+        }
 
 .sheet-weapontable select,
 .sheet-settings select,
 .sheet-page2 select,
-.sheet-othertrait select{
+.sheet-othertrait select {
     width: 47px;
     height: 14px;
     padding: 0px;
@@ -1419,8 +1313,8 @@ input[type=number] {
     cursor: default;
     box-shadow: 0px 1px 0px #000;
     border-radius: 0px;
-    -webkit-appearance:none;
-    -moz-appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     margin-bottom: 0px;
     line-height: 14px;
 }
@@ -1438,14 +1332,14 @@ input[type=number] {
     text-align: center;
 }
 
-.sheet-dottable table {
-    width: 100%;
-}
+    .sheet-dottable table {
+        width: 100%;
+    }
 
-.sheet-dottable .sheet-mortal td,
-.sheet-dottable .sheet-vampire td {
-    text-align: center;
-}
+    .sheet-dottable .sheet-mortal td,
+    .sheet-dottable .sheet-vampire td {
+        text-align: center;
+    }
 
 .sheet-page2 input[type="text"].sheet-partname {
     width: 116px;
@@ -1469,8 +1363,8 @@ input[type=number] {
     -webkit-box-shadow: 0px 1px 0px #000;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -webkit-appearance:none;
-    -moz-appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     margin-bottom: 0px;
 }
 
@@ -1500,27 +1394,27 @@ input[type=number] {
     text-align: center;
 }
 
-.charsheet .sheet-diceroller table td.sheet-initiative button:before {
-    content: "" !important;
-}
+    .charsheet .sheet-diceroller table td.sheet-initiative button:before {
+        content: "" !important;
+    }
 
-.charsheet .sheet-diceroller table td.sheet-initiative button {
-    color: #2A2D80;
-    text-shadow: 0px 0px 10px black;
-    font-weight: bold;
-    height: auto;
-    width: auto;
-    opacity: 100;
-    cursor: pointer;
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
+    .charsheet .sheet-diceroller table td.sheet-initiative button {
+        color: #2A2D80;
+        text-shadow: 0px 0px 10px black;
+        font-weight: bold;
+        height: auto;
+        width: auto;
+        opacity: 100;
+        cursor: pointer;
+        background: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
 
 .sheet-page2 textarea,
 .sheet-page3 textarea {
-    resize:vertical;
+    resize: vertical;
     width: calc(100% - 10px);
     margin-top: 10px;
     height: 74px;
@@ -1568,11 +1462,11 @@ input[type=text].sheet-title {
     text-align: center;
 }
 
-.sheet-page3 .sheet-subheader {
-    width: 300px;
-    font-size: 1.4em;
-    font-weight: bolder;
-}
+    .sheet-page3 .sheet-subheader {
+        width: 300px;
+        font-size: 1.4em;
+        font-weight: bolder;
+    }
 /* PRD-1407 */
 .charsheet .repcontainer.editmode .repitem .itemcontrol {
     z-index: 100;
