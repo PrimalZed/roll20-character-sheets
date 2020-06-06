@@ -254,12 +254,12 @@
             <span class="demon" data-i18n="incarnation" >Incarnation:</span>
             <span class="beast" data-i18n="family" >Family:</span>
             <span class="hunter" data-i18n="profession" >Profession:</span>
-            <span class="demonfallen" data-i18n="demeanor" >Demeanor:</span>
+            <span class="demonfallen" data-i18n="house" >House:</span>
         </div>
         <input type="text" name="attr_Chronicle">
         <!-- Row 2 -->
         <div class="input-label">
-            <span class="mortal1 mortal2 vampire werewolf mage promethean changeling geist1 mummy hunter demon" data-i18n="player">Player:</span>
+            <span class="mortal1 mortal2 vampire werewolf mage promethean changeling geist1 mummy hunter demon demonfallen" data-i18n="player">Player:</span>
             <span class="geist2-organization" data-i18n="archtype">Archetype:</span>
         </div>
         <input type="text" name="attr_Age">
@@ -273,6 +273,7 @@
             <span class="promethean2" data-i18n="torment" >Torment:</span>
             <span class="changeling2" data-i18n="thread" >Thread:</span>
             <span class="geist2" data-i18n="bloom" >Bloom:</span>
+            <span class="demonfallen" data-i18n="demeanor" >Demeanor:</span>
         </div>
         <input type="text" name="attr_Vice">
         <div class="spacer"></div>
@@ -3284,7 +3285,7 @@
             case "demon":
                 return "demon";
             case "demonfallen":
-                return "demonfaleen";
+                return "demonfallen";
             case "beast":
                 return "beast";
         }
