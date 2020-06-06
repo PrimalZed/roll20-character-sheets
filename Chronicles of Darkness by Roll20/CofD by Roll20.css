@@ -46,7 +46,7 @@
 .sheet-demon,
 .sheet-beast,
 .sheet-hunter,
-.sheet-demonfall {
+.sheet-demonfallen {
     display: none !important;
 }
 
@@ -77,7 +77,7 @@ input.sheet-game-line[value="mummy"] ~ * .sheet-mummy,
 input.sheet-type[value="mummy1"] ~ * .sheet-mummy1,
 input.sheet-type[value="mummy2"] ~ * .sheet-mummy2,
 input.sheet-game-line[value="demon"] ~ * .sheet-demon,
-input.sheet-game-line[value="demonfall"] ~ * .sheet-demonfall,
+input.sheet-game-line[value="demonfallen"] ~ * .sheet-demonfallen,
 input.sheet-game-line[value="beast"] ~ * .sheet-beast,
 input.sheet-game-line[value="hunter"] ~ * .sheet-hunter {
     display: inline-block !important;
@@ -110,7 +110,7 @@ input.sheet-game-line[value="mummy"] ~ * div.sheet-mummy,
 input.sheet-type[value="mummy1"] ~ * div.sheet-mummy1,
 input.sheet-type[value="mummy2"] ~ * div.sheet-mummy2,
 input.sheet-game-line[value="demon"] ~ * div.sheet-demon,
-input.sheet-game-line[value="demonfall"] ~ * div.sheet-demonfall,
+input.sheet-game-line[value="demonfallen"] ~ * div.sheet-demonfallen,
 input.sheet-game-line[value="beast"] ~ * div.sheet-beast,
 input.sheet-game-line[value="hunter"] ~ * div.sheet-hunter {
     display: block !important;
@@ -143,7 +143,7 @@ input.sheet-game-line[value="mummy"] ~ * table.sheet-mummy,
 input.sheet-type[value="mummy1"] ~ * table.sheet-mummy1,
 input.sheet-type[value="mummy2"] ~ * table.sheet-mummy2,
 input.sheet-game-line[value="demon"] ~ * table.sheet-demon,
-input.sheet-game-line[value="demonfall"] ~ * table.sheet-demonfall,
+input.sheet-game-line[value="demonfallen"] ~ * table.sheet-demonfallen,
 input.sheet-game-line[value="beast"] ~ * table.sheet-beast,
 input.sheet-game-line[value="hunter"] ~ * table.sheet-hunter {
     display: table !important;
@@ -246,7 +246,7 @@ input.sheet-game-line[value="demon"] ~ .sheet-background-image::after {
     background-size: 100% 100%;
 }
 
-input.sheet-game-line[value="demonfall"] ~ .sheet-background-image::after {
+input.sheet-game-line[value="demonfallen"] ~ .sheet-background-image::after {
     background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/demon-bg.png');
     background-size: 100% 100%;
 }
@@ -288,7 +288,7 @@ input.sheet-page3-sheet:checked ~ .sheet-background-image::after {
     }
 
     .sheet-header img.sheet-geist,
-    .sheet-header img.sheet-demonfall,
+    .sheet-header img.sheet-demonfallen,
     .sheet-header img.sheet-demon {
         height: 200px;
     }
@@ -436,13 +436,13 @@ input.sheet-game-line[value="demon"] ~ * input.sheet-weapon:checked + span + .sh
     color: #2A2D80;
 }
 
-input.sheet-type[value="demofall"] ~ * button.sheet-active-demonfall,
-input.sheet-game-line[value="demonfall"] + span.sheet-attr,
-input.sheet-game-line[value="demonfall"] ~ input.sheet-attr:checked + span.sheet-attr,
-input.sheet-game-line[value="demonfall"] ~ * input.sheet-attr:checked + span.sheet-attr,
-input.sheet-game-line[value="demonfall"] ~ * input.sheet-flag:not([value="0"]) + button.sheet-toggle,
-input.sheet-game-line[value="demonfall"] ~ * .sheet-potency input.sheet-attr:checked ~ span.sheet-attr,
-input.sheet-game-line[value="demonfall"] ~ * input.sheet-weapon:checked + span + .sheet-weaponstat.sheet-name {
+input.sheet-type[value="demofall"] ~ * button.sheet-active-demonfallen,
+input.sheet-game-line[value="demonfallen"] + span.sheet-attr,
+input.sheet-game-line[value="demonfallen"] ~ input.sheet-attr:checked + span.sheet-attr,
+input.sheet-game-line[value="demonfallen"] ~ * input.sheet-attr:checked + span.sheet-attr,
+input.sheet-game-line[value="demonfallen"] ~ * input.sheet-flag:not([value="0"]) + button.sheet-toggle,
+input.sheet-game-line[value="demonfallen"] ~ * .sheet-potency input.sheet-attr:checked ~ span.sheet-attr,
+input.sheet-game-line[value="demonfallen"] ~ * input.sheet-weapon:checked + span + .sheet-weaponstat.sheet-name {
     color: #2A2D80;
 }
 
