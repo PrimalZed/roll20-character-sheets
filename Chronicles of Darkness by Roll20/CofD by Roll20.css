@@ -247,8 +247,9 @@ input.sheet-game-line[value="demon"] ~ .sheet-background-image::after {
 }
 
 input.sheet-game-line[value="demonfallen"] ~ .sheet-background-image::after {
-    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/demon-bg.png');
+    background: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Chronicles%20of%20Darkness%20by%20Roll20/images/chronicles-bg.jpg');
     background-size: 100% 100%;
+    opacity: 0.2
 }
 
 input.sheet-game-line[value="beast"] ~ .sheet-background-image::after {
@@ -288,25 +289,27 @@ input.sheet-page3-sheet:checked ~ .sheet-background-image::after {
     }
 
     .sheet-header img.sheet-geist,
-    .sheet-header img.sheet-demonfallen,
+   
     .sheet-header img.sheet-demon {
         height: 200px;
     }
-
-button.sheet-toggle {
-    /* Resetting user-agent styling */
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-    overflow: visible;
-    text-transform: none;
-    border-style: none;
-    padding: 0 4px;
-    background: white;
-    border-radius: 4px;
-    font-weight: bold;
-}
+    .sheet-header img.sheet-demonfallen, {
+        height: 85px;
+    }
+    button.sheet-toggle {
+        /* Resetting user-agent styling */
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+        overflow: visible;
+        text-transform: none;
+        border-style: none;
+        padding: 0 4px;
+        background: white;
+        border-radius: 4px;
+        font-weight: bold;
+    }
 
 input.sheet-attr:checked + span.sheet-attr,
 input.sheet-flag:not([value="0"]) + button.sheet-toggle,
