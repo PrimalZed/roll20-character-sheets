@@ -106,5 +106,12 @@
 	"projects": "Projects",
 	"project-name": "Project Name",
 	"assigned-hero-follower": "Assigned Hero/Follower",
-	"characteristic": "Characteristic"
+	"characteristic": "Characteristic",
+	"free-strike": "Free Strike",
+	"npc-toggle": "NPC View",
+	"movement": "Movement",
+	"immunity": "Immunity",
+	"weakness": "Weakness",
+	"with-captain": "With Captain",
+	"encounter-value-abbr": "EV"
 }
