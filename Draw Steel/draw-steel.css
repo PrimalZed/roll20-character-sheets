@@ -404,52 +404,62 @@ label.sublabel {
 
 .class-panel {
 	grid-column-end: span 4;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
 }
-.class-panel > .panel-title {
-	grid-column-start: 1;
-	grid-column-end: -1;
-	text-align: center;
-}
-
 .ancestry-panel {
 	grid-column-end: span 2;
-	display: grid;
 }
+.class-panel > .panel-title,
 .ancestry-panel > .panel-title {
 	text-align: center;
+}
+.repcontainer[data-groupname="repeating_classfeatures"] {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 0.2em;
+}
+.repcontainer[data-groupname="repeating_classfeatures"] > .repitem,
+.repcontainer[data-groupname="repeating_ancestrytraits"] > .repitem {
+	display: grid;
+	grid-gap: 0.2em;
+}
+.repcontainer[data-groupname="repeating_classfeatures"] > .repitem > input,
+.repcontainer[data-groupname="repeating_ancestrytraits"] > .repitem > input {
+	font-weight: bold;
+}
+.repcontainer[data-groupname="repeating_classfeatures"] > .repitem > textarea,
+.repcontainer[data-groupname="repeating_ancestrytraits"] > .repitem > textarea {
+	height: 50px;
 }
 
 .perks-panel {
 	grid-column-end: span 4;
 }
-.perks-panel > .panel-title {
+.titles-panel {
+	grid-column-end: span 2;
+}
+.perks-panel > .panel-title,
+.titles-panel > .panel-title {
 	text-align: center;
 }
 .repcontainer[data-groupname="repeating_perks"] {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-}
-.perk-card {
-	display: grid;
-}
-.perk-card > textarea {
-	height: 75px;
-}
-
-.titles-panel {
-	grid-column-end: span 2;
-}
-.titles-panel > .panel-title {
-	text-align: center;
+	grid-gap: 0.2em;
 }
 .repcontainer[data-groupname="repeating_titles"] {
 	display: grid;
+	grid-gap: 0.2em;
 }
+.perk-card,
 .title-card {
 	display: grid;
+	grid-gap: 0.2em;
 }
+.perk-card > input,
+.title-card > input {
+	font-weight: bold;
+}
+.perk-card > textarea,
 .title-card > textarea {
 	height: 75px;
 }
@@ -778,12 +788,16 @@ label.sublabel {
   color: #000;
 }
 
+.disclaimer {
+	font-family: Menlo, Monaco, Consolas
+}
+
 /* NPC Sheet */
 .npc-sheet-body {
 	min-width: 566px;
 }
 
-.npc-header-panel {
+.npc-header-display {
 	background: #fff;
 	display: grid;
 	grid-template-columns: 1fr auto;
@@ -834,24 +848,16 @@ label.sublabel {
 
 .npc-skills-panel {
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: 1fr 1fr;
 	gap: 0.25em;
 	align-items: center;
 	background: #fff;
-	justify-items: end;
+	justify-items: start;
 	padding: 10px;
 	border-bottom: 2px solid #aaa;
 }
 
-.npc.ability-card {
-  margin: 8px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  background: #fff;
-  padding: 5px;
-}
-
-.npc.ability-card .ability-effect, .npc.ability-card .ability-trigger {
+.npc-ability-card .ability-effect, .npc.ability-card .ability-trigger {
 	height: auto;
 }
 
@@ -860,3 +866,142 @@ label.sublabel {
 .npc-abilities-panel .repcontrol {
   display: none;
 }
+
+.npc-edit {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5px;
+	align-items: baseline;
+	justify-items: start;
+}
+
+.npc-edit-grid {
+	display: grid;
+	gap: 3px;
+}
+
+.npc-edit-stats {
+	grid-template-columns: 1fr 1fr;
+}
+
+
+
+label.npc-edit-icon {
+	font-family: "Pictos";
+	font-size: 2em;
+	left: 95%;
+	position: relative;
+	top: -15px;
+}
+
+input.npc-edit-toggle {
+	visibility: hidden;
+}
+
+.charsheet input.npc-edit-toggle:not(:checked) ~ div.npc-edit {
+    display: none;
+} 
+
+.npc-conditions {
+	min-height: 3em;
+	background-color: #fff;
+	padding: 10px;
+}
+
+.npc-conditions > .repcontainer[data-groupname="repeating_conditions"] > .repitem {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr ;
+  gap: 0.25em;
+  align-items: start;
+}
+
+.npc-ability-card input[value="0"] ~ .npc-power-roll {
+	display:none;
+}
+
+.npc-ability-card input[value="1"] ~ .npc-power-roll {
+	display:block;
+}
+
+.npc-power-roll {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	grid-column-end: -1;
+	grid-column-start: 1;
+	column-gap: 0.5em;
+}
+
+label.npc-ability-edit {
+	font-family: "Pictos";
+	font-size: 1em;
+	left: 95%;
+	position: relative;
+	top: -15px;
+}
+
+.charsheet input.npc-ability-edit:not(:checked) ~ div.ability-card, .charsheet input.npc-ability-edit:checked ~ div.npc-ability-card {
+    display: none;
+}
+
+.npc-abilities-panel > .repcontainer[data-groupname="repeating_abilities"] > .repitem {
+	margin: 8px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	background: #fff;
+	padding: 5px;
+	
+}
+
+.npc-ability-card {
+	display: grid;
+	grid-template-columns: 30px repeat(4, 1fr) 30px;
+}
+
+.npc-ability-card .ability-name {
+	grid-column-end: span 2;
+	grid-column-start: 2;
+}
+
+.npc-ability-card .ability-description {
+	grid-column-end: span 2;
+	grid-column-start: 4;
+	font-size: .9em;
+	font-style: inherit;
+	font-weight: bold;
+	justify-self: end;
+}
+
+.npc-ability-card .ability-type, .npc-ability-card .ability-keywords {
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+.npc-ability-card input:not([value*="triggered"]) ~ span.npc-ability-trigger {
+	display: none;
+}
+
+.npc-ability-trigger {
+	grid-column-end: span 6;
+}
+
+.npc-ability-button {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #ddd;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+input.npc-ability-edit {
+	right: 5px;
+	position: absolute;
+}
+
+.npc-ability-card > .ability-effect {
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+
