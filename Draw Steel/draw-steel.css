@@ -802,19 +802,34 @@ label.sublabel {
 	min-width: 566px;
 }
 
-.npc-header-display {
-	background: #fff;
+.npc-panel {
 	display: grid;
-	grid-template-columns: 1fr auto;
-	border-bottom: 2px solid #aaa;
+	background: #fff;
 	padding: 10px;
+	border-bottom: 2px solid #aaa;
+}
+
+.npc-header-panel {
+	grid-template-columns: 1fr auto;
+	align-items: baseline;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.npc-header-panel div:nth-child(even) {
+	justify-self: right;
+}
+
+.npc-name {
+	font-size: 2em;
+	font-weight: 800;
+}
+
+.npc-level {
+	font-weight: 800;
 }
 
 .npc-stats-panel {
-	background: #fff;
-	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	padding: 10px;
 }
 
 .npc-stats-panel div {
@@ -823,21 +838,18 @@ label.sublabel {
 	align-items: center;
 }
 
-.npc-name {
-	font-size: 2em;
-	font-weight: 800;
-}
-
 .npc-stat {
 	font-size: 1.5em;
 }
 
+.npc-skills-panel {
+	grid-template-columns: 1fr 1fr;
+	justify-items: start;
+	border: none;
+}
+
 .npc-marip-panel {
-	background: #fff;
-	display: grid;
 	grid-template-columns: repeat(5,1fr);
-	border-bottom: 2px solid #aaa;
-	padding: 10px;
 }
 
 .npc-marip-panel div {
@@ -851,66 +863,8 @@ label.sublabel {
 	font-size: 1.2em;
 }
 
-.npc-skills-panel {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 0.25em;
-	align-items: center;
-	background: #fff;
-	justify-items: start;
-	padding: 10px;
-	border-bottom: 2px solid #aaa;
-}
-
-.npc-ability-card .ability-effect, .npc.ability-card .ability-trigger {
-	height: auto;
-}
-
-.charsheet .npc-checkbox:not(:checked) ~ .npc-sheet-body,
-.charsheet .npc-checkbox:checked ~ .sheet-body,
-.npc-abilities-panel .repcontrol {
-  display: none;
-}
-
-.npc-edit {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 5px;
-	align-items: baseline;
-	justify-items: start;
-}
-
-.npc-edit-grid {
-	display: grid;
-	gap: 3px;
-}
-
-.npc-edit-stats {
-	grid-template-columns: 1fr 1fr;
-}
-
-
-
-label.npc-edit-icon {
-	font-family: "Pictos";
-	font-size: 2em;
-	left: 95%;
-	position: relative;
-	top: -15px;
-}
-
-input.npc-edit-toggle {
-	visibility: hidden;
-}
-
-.charsheet input.npc-edit-toggle:not(:checked) ~ div.npc-edit {
-    display: none;
-} 
-
 .npc-conditions {
 	min-height: 3em;
-	background-color: #fff;
-	padding: 10px;
 }
 
 .npc-conditions > .repcontainer[data-groupname="repeating_conditions"] > .repitem {
@@ -918,6 +872,11 @@ input.npc-edit-toggle {
   grid-template-columns: 2fr 1fr 1fr ;
   gap: 0.25em;
   align-items: start;
+}
+
+/* NPC Ability Card Styling */
+.npc-ability-card .ability-effect, .npc.ability-card .ability-trigger {
+	height: auto;
 }
 
 .npc-ability-card input[value="0"] ~ .npc-power-roll {
@@ -1009,4 +968,58 @@ input.npc-ability-edit {
 	grid-column-start: 1;
 	grid-column-end: -1;
 }
+
+/* Switches between Character and NPC Sheets */
+.charsheet .npc-checkbox:not(:checked) ~ .npc-sheet-body,
+.charsheet .npc-checkbox:checked ~ .sheet-body
+{
+  display: none;
+}
+
+/* NPC edit styling */
+label.npc-edit-icon {
+	font-family: "Pictos";
+	font-size: 1.5em;
+	left: 95%;
+	position: relative;
+	top: -15px;
+	color: #333;
+}
+
+input.npc-edit-toggle {
+	visibility: hidden;
+}
+
+.npc-edit {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1em;
+	align-items: baseline;
+	justify-items: start;
+	font-size: .8em;
+}
+
+.npc-edit-grid {
+	display: grid;
+	gap: 3px;
+}
+
+.npc-edit-stats {
+	grid-template-columns: 1fr 1fr;
+}
+
+.npc-edit-stats > input[type="text"] {
+	width: 3.5em;
+}
+
+.npc-edit-text {
+	grid-template-columns: auto 1fr auto 1fr;
+	grid-column-end: span 2;
+	grid-column-gap: 1em;
+}
+
+.charsheet input.npc-edit-toggle:not(:checked) ~ div.npc-edit {
+    display: none;
+} 
+
 

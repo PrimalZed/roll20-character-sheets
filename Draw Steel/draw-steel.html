@@ -543,7 +543,7 @@
 <div class="npc-sheet-body">
 	<label class="npc-edit-icon" for="npc-edit-toggle">p</label><input class="npc-edit-toggle" type="checkbox" id="npc-edit-toggle" />
 	<div class="npc-edit">
-		<div class="npc-edit-grid">
+		<div class="npc-edit-grid npc-edit-text">
 			<label data-i18n="character-name"></label>
 			<input type="text" name="attr_character_name" />
 			<label data-i18n="keywords"></label>
@@ -554,8 +554,6 @@
 			<input type="text" name="attr_npc_role" />
 			<label data-i18n="encounter-value-abbr"></label>
 			<input type="text" name="attr_npc_EV" />
-		</div>
-		<div class="npc-edit-grid">
 			<label data-i18n="immunity" for="attr_immunity"></label>
 			<input type="text" name="attr_immunity" />
 			<label data-i18n="weakness" for="attr_weakness"></label>
@@ -576,26 +574,28 @@
 			<input type="number" name="attr_intuition" />
 			<label data-i18n="presence"></label>
 			<input type="number" name="attr_presence" />
+		</div>
+		<div class="npc-edit-grid npc-edit-stats">
+			<label data-i18n="size"></label>
+			<input type="text" name="attr_size" />
+			<label data-i18n="speed"></label>
+			<input type="number" name="attr_speed" />
+			<label data-i18n="stamina"></label>
+			<input type="number" name="attr_stamina" />
+			<label data-i18n="stability"></label>
+			<input type="number" name="attr_stability" />
 			<label data-i18n="free-strike"></label>
 			<input type="number" name="attr_npc_freestrike" />
-		</div>	
+		</div>			
 	</div>
 	<div class="npc-display">
-		<div class="npc-header-panel">
-			<div class="npc-header-display">
-				<div>
-					<div><span class="npc-name" name="attr_character_name"></span></div>
-					<div><span name="attr_npc_keywords"></span></div>
-				</div>
-				<div>
-					<div><span data-i18n="level"></span>&nbsp;<span name="attr_level"></span>&nbsp;<span name="attr_npc_role"></div>
-					<div>
-						<span data-i18n="encounter-value-abbr"></span>&nbsp;<span name="attr_npc_EV"></span>
-					</div>
-				</div>
-			</div>
+		<div class="npc-header-panel npc-panel">
+			<div class="npc-name"><span name="attr_character_name"></span></div>
+			<div class="npc-level"><span data-i18n="level"></span>&nbsp;<span name="attr_level"></span>&nbsp;<span name="attr_npc_role"></div>
+			<div><span name="attr_npc_keywords"></span></div>
+			<div><span data-i18n="encounter-value-abbr"></span>&nbsp;<span name="attr_npc_EV"></span></div>
 		</div>
-		<div class="npc-stats-panel">
+		<div class="npc-stats-panel npc-panel">
 			<div class="npc-stat">
 				<span name="attr_size"></span>
 				<label class="sublabel" data-i18n="size"></label>
@@ -617,7 +617,7 @@
 				<label class="sublabel" data-i18n="free-strike"></label>
 			</div>
 		</div>
-		<div class="npc-skills-panel">
+		<div class="npc-skills-panel npc-panel" >
 				<div>
 					<label data-i18n="immunity"></label>:
 					<span name="attr_immunity"></span>
@@ -635,7 +635,7 @@
 					<span name="attr_npc_with_captain"></span>
 				</div>
 		</div>
-		<div class="npc-marip-panel">
+		<div class="npc-marip-panel npc-panel">
 			<div class="characteristic-input-group">
 				<label data-characteristic="might" data-i18n="might"></label>
 				<span name="attr_might"></span>
@@ -658,7 +658,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="npc-conditions">
+	<div class="npc-conditions npc-panel">
 		<h5 class="panel-title" data-i18n="conditions"></h5>
 		<fieldset class="repeating_conditions">
 			<input type="text" name="attr_condition_name" data-i18n-placeholder="condition" />
@@ -807,7 +807,7 @@
 	</div>
 	{{#rollTotal() hasTrigger 1}}
 	<div class="effect-block">
-		<div class="effect-label">^{trigger}:</div>
+		<div class="effect-label"><span data-i18n="trigger"></span>:</div>
 		<div class="effect-text">{{trigger}}</div>
 	</div>
 	{{/rollTotal() hasTrigger 1}}
@@ -833,7 +833,7 @@
 	{{/rollTotal() hasPowerRoll 1}}
 	{{#rollTotal() hasEffect 1}}
 	<div class="effect-block">
-		<div class="effect-label">^{effect}:</div>
+		<div class="effect-label"><span data-i18n="effect"></span>:</div>
 		<div class="effect-text">{{effect}}</div>
 	</div>
 	{{/rollTotal() hasEffect 1}}
